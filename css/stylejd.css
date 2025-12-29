@@ -1,0 +1,385 @@
+/*head样式表*/
+.head-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(87, 156, 241);
+    z-index: 99;
+
+}
+
+.head-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 0;
+}
+
+.nav-wrapper {
+    width: 100%;
+    display: flex;
+    /* 设置子元素一行显示 */
+    flex-direction: row;
+    /* 水平方向设置为两端对齐 */
+    justify-content: flex-start;
+}
+
+.logo-wrapper {
+    width: 120px;
+    height: 60px;
+    margin-right: 60px;
+}
+
+.avatar-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    
+}
+
+.avatar {
+    height: 40px;
+    width: 40px;
+
+}
+
+.avatar-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 2px #ddd;
+}
+
+
+.logo-img {
+    width: 60%;
+    height: 100%;
+    display: block;
+    border-radius: 100%;
+}
+
+.header-nav-close {
+    width: 32px;
+}
+
+.header-nav-close img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    width: 100px;
+    display: inline-block
+}
+
+.nav-item-content{
+    display: none;
+    position: absolute;
+    background-color: #8eaff0;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.nav-item-content a{
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-item-content a:hover{
+    background-color: #5e6ec1;
+}
+
+.nav-item:hover .nav-item-content {
+    display: block;
+}
+
+.nav-link {
+    color: #000;
+    font-size: 14px;
+    transition: all .1s;
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.nav-link:hover{
+    font-size: 16px;
+    /* font-weight: bold; */
+}
+
+.login-btn {
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 3px;
+    color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+}
+
+.btn:hover {
+    width: 100%;
+    background: rgb(101, 143, 203);
+    color: #fff;
+    cursor: pointer;
+
+}
+/*head结束*/
+a:link{
+    text-decoration: none; 
+}
+a:visited{
+    text-decoration: none; 
+}
+a:hover{
+    text-decoration: none;     
+    color:paleturquoise;
+}
+img{
+    border-radius: 15px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background:url(../img/bj.png);
+}
+span{
+    float: right;
+}
+span  p{
+    font-size: small;
+}
+span a{
+    color: rgb(0, 0, 0);
+}
+span a:hover{
+    color: rgb(106, 146, 188);
+}
+.zhuti{
+    text-align: center;
+    margin: 30px 200px 0px 200px;
+    background-color: rgb(172, 218, 230);
+}
+#hh{
+    margin-top: 20px;
+    height: 200px;
+    background-color: rgb(160, 202, 218);
+    font-size: x-large;
+    padding: 10px;
+    font-family: 楷体;
+}
+#hh p{
+    letter-spacing: 2px;
+    text-indent: 2em;
+    line-height: 1.5em;
+    font-size: large;
+}
+#hh img{
+    height: 200px;
+    width: 300px;
+    float: left;
+    margin: 0px 10px 0px 0px;
+}
+#hh img:hover{
+    transform: scale(1.2);
+}
+#blw{
+    margin-top: 20px;
+    height: 200px;
+    background-color: rgb(160, 202, 218);
+    font-size: x-large;
+    padding: 10px;
+    font-family: 楷体;
+}
+#blw p{
+    letter-spacing: 2px;
+    text-indent: 2em;
+    line-height: 1.5em;
+    font-size: large;
+}
+#blw img{
+    height: 200px;
+    width: 300px;
+    float: left;
+    margin: 0px 10px 0px 0px;
+}
+#blw img:hover{
+    transform: scale(1.2);
+}
+#yy{
+    margin-top: 20px;
+    height: 200px;
+    background-color: rgb(122, 159, 162);
+    font-size: x-large;
+    padding: 10px;
+    font-family: 楷体;
+}
+#yy p{
+    letter-spacing: 2px;
+    text-indent: 2em;
+    line-height: 1.5em;
+    font-size: large;
+}
+#yy img{
+    height: 200px;
+    width: 300px;
+    float: left;
+    margin: 0px 10px 0px 0px;
+}
+#yy img:hover{
+    transform: scale(1.2);
+}
+.zhuti a{
+    text-decoration: none;
+}
+.box-b{
+    height: 50px;
+    background:  rgb(87, 156, 241);
+}
+.box-b-d{
+    font-size:15px;     
+    padding-top:3px;    
+}
+.box-b-d i{
+    font-size: 30px;
+    color:#ffffff;
+    font-family: 楷体;
+}
+.dh {
+    margin-left: 300px;
+    margin-bottom: 30px;
+    flex: 1;
+    height: 30px;
+    font-size: 1.3em;
+    display: block;
+}
+.dh li {
+    height: 30px;
+    width: 250px;
+    list-style: none;
+    float: left;
+    display: inline;
+}
+.dh li a {
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-size: 25px;
+    text-decoration: none;
+    display: block;
+    background-color:#43c2d8;
+    line-height: 40px;
+    border-bottom: 1px solid rgb(168, 164, 172);
+    font-family: 楷体;
+}
+.dh li a:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(37, 84, 155);
+    border-bottom: 3px solid rgb(16, 4, 28);
+}
+.footer {
+    /*尾部*/
+    clear: both;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(87, 156, 241);
+    color: rgb(28, 41, 99);
+    font: italic 14px/20px 宋体;
+    text-align: center;
+}
+ 
+.footer p {
+    /*尾部段落*/
+    margin-top: 10px;
+}
+ 
+#fi1 {
+    /*尾部图片*/
+    width: 100px;
+    height: 70px;
+    float: right;
+    padding: 0px;
+    border-radius: 100%;
+}
+@keyframes fadeInRight {
+    10% {
+        opacity: 0.8;
+        /* transform: translateX(-100%) */
+    }
+
+    50% {
+        /* transform: rotateY(10deg); */
+    }
+
+
+    100% {
+        opacity: 1;
+    }
+}
+/*去顶部*/
+.helper-wrapper {
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+
+
+}
+.to-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #999;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 2px #ccc;
+    width: 50px;
+    height: 60px;
+
+}
+.to-top:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 2px 2px #999;
+}
+.to-top-img {
+    width: 40px;
+}
+.to-top-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.to-top-title {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: #000000;
+    font-size: 13px;
+}
+/*去顶部结束*/
+html {
+    animation: fadeInRight 1.5s;
+}
