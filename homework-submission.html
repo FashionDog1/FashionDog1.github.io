@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业提交 - 机器学习课程网站</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 自定义CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.jpg" alt="机器学习课程" class="logo-img">
+                <span class="ms-2 fw-bold text-dark">机器学习课程</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="course-evaluation.html">课程评价</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teacher-student-interaction.html">师生互动</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="homework-submission.html">作业提交</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="other-resources.html">其他资源</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">登录</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">注册</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 作业提交页面 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="text-center mb-12">
+                        <h2 class="fw-bold text-dark mb-4">作业提交</h2>
+                        <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-6"></div>
+                        <p class="text-gray-600">查看作业要求，提交作业，获取反馈和评分</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 作业列表 -->
+            <div class="row justify-content-center mb-16">
+                <div class="col-lg-8 col-md-10">
+                    <div class="card shadow-sm rounded-lg overflow-hidden">
+                        <div class="card-header bg-white border-bottom border-gray-100">
+                            <h3 class="card-title fw-bold text-dark mb-0">作业列表</h3>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="homework-list">
+                                <!-- 作业项 1 -->
+                                <div class="homework-item border-bottom border-gray-100 p-6 hover:bg-gray-50 transition-colors duration-300">
+                                    <div class="homework-header d-flex justify-between items-start mb-3">
+                                        <h4 class="homework-title fw-bold text-dark mb-0">
+                                            <a href="#" class="text-dark hover:text-blue-500 transition-colors duration-300">作业1：线性回归算法实现</a>
+                                        </h4>
+                                        <span class="homework-status badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">已提交</span>
+                                    </div>
+                                    <div class="homework-meta d-flex items-center text-gray-500 text-sm mb-4">
+                                        <span class="homework-deadline mr-4">
+                                            <i class="fas fa-calendar-alt mr-1"></i> 截止日期：2026-01-10
+                                        </span>
+                                        <span class="homework-score">
+                                            <i class="fas fa-score mr-1"></i> 得分：95
+                                        </span>
+                                    </div>
+                                    <div class="homework-content text-gray-600 mb-4">
+                                        <p>实现线性回归算法，包括单变量和多变量线性回归，使用梯度下降法求解参数。并使用真实数据集进行测试和分析。</p>
+                                    </div>
+                                    <div class="homework-footer d-flex justify-between items-center">
+                                        <div class="homework-actions d-flex space-x-3">
+                                            <a href="#" class="homework-detail btn btn-sm btn-outline-dark rounded-full px-4 py-1 hover:bg-gray-50 transition-colors duration-300">
+                                                查看详情
+                                            </a>
+                                            <a href="#" class="homework-download btn btn-sm btn-outline-dark rounded-full px-4 py-1 hover:bg-gray-50 transition-colors duration-300">
+                                                下载作业
+                                            </a>
+                                        </div>
+                                        <span class="homework-submit-time text-gray-500 text-sm">
+                                            提交时间：2026-01-08
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- 作业项 2 -->
+                                <div class="homework-item border-bottom border-gray-100 p-6 hover:bg-gray-50 transition-colors duration-300">
+                                    <div class="homework-header d-flex justify-between items-start mb-3">
+                                        <h4 class="homework-title fw-bold text-dark mb-0">
+                                            <a href="#" class="text-dark hover:text-blue-500 transition-colors duration-300">作业2：逻辑回归与分类算法</a>
+                                        </h4>
+                                        <span class="homework-status badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">已提交</span>
+                                    </div>
+                                    <div class="homework-meta d-flex items-center text-gray-500 text-sm mb-4">
+                                        <span class="homework-deadline mr-4">
+                                            <i class="fas fa-calendar-alt mr-1"></i> 截止日期：2026-01-20
+                                        </span>
+                                        <span class="homework-score">
+                                            <i class="fas fa-score mr-1"></i> 得分：92
+                                        </span>
+                                    </div>
+                                    <div class="homework-content text-gray-600 mb-4">
+                                        <p>实现逻辑回归算法，用于二分类问题。并比较不同分类算法（如KNN、决策树等）在相同数据集上的性能表现。</p>
+                                    </div>
+                                    <div class="homework-footer d-flex justify-between items-center">
+                                        <div class="homework-actions d-flex space-x-3">
+                                            <a href="#" class="homework-detail btn btn-sm btn-outline-dark rounded-full px-4 py-1 hover:bg-gray-50 transition-colors duration-300">
+                                                查看详情
+                                            </a>
+                                            <a href="#" class="homework-download btn btn-sm btn-outline-dark rounded-full px-4 py-1 hover:bg-gray-50 transition-colors duration-300">
+                                                下载作业
+                                            </a>
+                                        </div>
+                                        <span class="homework-submit-time text-gray-500 text-sm">
+                                            提交时间：2026-01-18
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- 作业项 3 -->
+                                <div class="homework-item border-bottom border-gray-100 p-6 hover:bg-gray-50 transition-colors duration-300">
+                                    <div class="homework-header d-flex justify-between items-start mb-3">
+                                        <h4 class="homework-title fw-bold text-dark mb-0">
+                                            <a href="#" class="text-dark hover:text-blue-500 transition-colors duration-300">作业3：神经网络基础</a>
+                                        </h4>
+                                        <span class="homework-status badge bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">进行中</span>
+                                    </div>
+                                    <div class="homework-meta d-flex items-center text-gray-500 text-sm mb-4">
+                                        <span class="homework-deadline mr-4">
+                                            <i class="fas fa-calendar-alt mr-1"></i> 截止日期：2026-02-05
+                                        </span>
+                                        <span class="homework-score">
+                                            <i class="fas fa-score mr-1"></i> 未评分
+                                        </span>
+                                    </div>
+                                    <div class="homework-content text-gray-600 mb-4">
+                                        <p>实现简单的神经网络模型，包括前向传播和反向传播算法。使用该模型解决手写数字识别问题。</p>
+                                    </div>
+                                    <div class="homework-footer d-flex justify-between items-center">
+                                        <div class="homework-actions d-flex space-x-3">
+                                            <a href="#" class="homework-detail btn btn-sm btn-outline-dark rounded-full px-4 py-1 hover:bg-gray-50 transition-colors duration-300">
+                                                查看详情
+                                            </a>
+                                            <a href="#" class="homework-download btn btn-sm btn-outline-dark rounded-full px-4 py-1 hover:bg-gray-50 transition-colors duration-300">
+                                                下载作业
+                                            </a>
+                                        </div>
+                                        <span class="homework-submit-time text-gray-500 text-sm">
+                                            未提交
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- 作业项 4 -->
+                                <div class="homework-item p-6 hover:bg-gray-50 transition-colors duration-300">
+                                    <div class="homework-header d-flex justify-between items-start mb-3">
+                                        <h4 class="homework-title fw-bold text-dark mb-0">
+                                            <a href="#" class="text-dark hover:text-blue-500 transition-colors duration-300">作业4：聚类算法实践</a>
+                                        </h4>
+                                        <span class="homework-status badge bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">未开始</span>
+                                    </div>
+                                    <div class="homework-meta d-flex items-center text-gray-500 text-sm mb-4">
+                                        <span class="homework-deadline mr-4">
+                                            <i class="fas fa-calendar-alt mr-1"></i> 截止日期：2026-02-20
+                                        </span>
+                                        <span class="homework-score">
+                                            <i class="fas fa-score mr-1"></i> 未评分
+                                        </span>
+                                    </div>
+                                    <div class="homework-content text-gray-600 mb-4">
+                                        <p>实现K-means聚类算法，并使用不同的聚类评估指标（如轮廓系数）评估聚类效果。使用真实数据集进行实验分析。</p>
+                                    </div>
+                                    <div class="homework-footer d-flex justify-between items-center">
+                                        <div class="homework-actions d-flex space-x-3">
+                                            <a href="#" class="homework-detail btn btn-sm btn-outline-dark rounded-full px-4 py-1 hover:bg-gray-50 transition-colors duration-300">
+                                                查看详情
+                                            </a>
+                                            <a href="#" class="homework-download btn btn-sm btn-outline-dark rounded-full px-4 py-1 hover:bg-gray-50 transition-colors duration-300">
+                                                下载作业
+                                            </a>
+                                        </div>
+                                        <span class="homework-submit-time text-gray-500 text-sm">
+                                            未提交
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 作业提交表单 -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="card shadow-sm rounded-lg overflow-hidden">
+                        <div class="card-header bg-white border-bottom border-gray-100">
+                            <h3 class="card-title fw-bold text-dark mb-0">提交作业</h3>
+                        </div>
+                        <div class="card-body p-8">
+                            <form id="homeworkForm">
+                                <div class="mb-6">
+                                    <label for="homeworkSelect" class="form-label text-gray-700 fw-medium">选择作业</label>
+                                    <select class="form-select border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300" id="homeworkSelect" required>
+                                        <option value="">请选择要提交的作业</option>
+                                        <option value="homework1">作业1：线性回归算法实现</option>
+                                        <option value="homework2">作业2：逻辑回归与分类算法</option>
+                                        <option value="homework3">作业3：神经网络基础</option>
+                                        <option value="homework4">作业4：聚类算法实践</option>
+                                    </select>
+                                </div>
+                                <div class="mb-6">
+                                    <label for="homeworkFile" class="form-label text-gray-700 fw-medium">上传作业文件</label>
+                                    <input type="file" class="form-control border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300" id="homeworkFile" accept=".pdf,.doc,.docx,.zip,.rar,.py" required>
+                                    <div class="form-text text-gray-500 mt-2">
+                                        支持的文件格式：PDF、Word文档、ZIP压缩包、Python文件
+                                    </div>
+                                </div>
+                                <div class="mb-6">
+                                    <label for="homeworkComment" class="form-label text-gray-700 fw-medium">作业说明（可选）</label>
+                                    <textarea class="form-control border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300" id="homeworkComment" rows="3" placeholder="请输入作业相关说明..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-dark w-100 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-300">提交作业</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container">
+            <div class="row g-6">
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="footer-title fw-bold mb-4">机器学习课程</h3>
+                    <p class="text-gray-400 mb-4">本课程旨在介绍机器学习的基本概念、理论和方法，帮助学生掌握机器学习的核心技术和应用能力。</p>
+                    <div class="social-links space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-weixin fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-weibo fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-github fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="footer-title fw-bold mb-4">快速链接</h3>
+                    <ul class="footer-links space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-300">首页</a></li>
+                        <li><a href="course-evaluation.html" class="text-gray-400 hover:text-white transition-colors duration-300">课程评价</a></li>
+                        <li><a href="teacher-student-interaction.html" class="text-gray-400 hover:text-white transition-colors duration-300">师生互动</a></li>
+                        <li><a href="homework-submission.html" class="text-gray-400 hover:text-white transition-colors duration-300">作业提交</a></li>
+                        <li><a href="other-resources.html" class="text-gray-400 hover:text-white transition-colors duration-300">其他资源</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <h3 class="footer-title fw-bold mb-4">联系我们</h3>
+                    <ul class="footer-contact space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">示例大学 计算机科学与技术学院</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-gray-400 mr-3"></i>
+                            <span class="text-gray-400">123-4567-8910</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-gray-400 mr-3"></i>
+                            <span class="text-gray-400">example@university.edu.cn</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-8 pt-6 border-t border-gray-800">
+                <div class="col-lg-12 text-center">
+                    <p class="text-gray-500">© 2026 机器学习课程. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 自定义JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
