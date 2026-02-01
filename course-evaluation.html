@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程评价 - 机器学习课程网站</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 自定义CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.jpg" alt="机器学习课程" class="logo-img">
+                <span class="ms-2 fw-bold text-dark">机器学习课程</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="course-evaluation.html">课程评价</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teacher-student-interaction.html">师生互动</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="homework-submission.html">作业提交</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="other-resources.html">其他资源</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">登录</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">注册</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 课程评价页面 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="text-center mb-12">
+                        <h2 class="fw-bold text-dark mb-4">课程评价</h2>
+                        <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-6"></div>
+                        <p class="text-gray-600">分享您对本课程的评价和反馈，帮助我们不断改进教学质量</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 提交评价表单 -->
+            <div class="row justify-content-center mb-16">
+                <div class="col-lg-8 col-md-10">
+                    <div class="card shadow-sm rounded-lg overflow-hidden">
+                        <div class="card-header bg-white border-bottom border-gray-100">
+                            <h3 class="card-title fw-bold text-dark mb-0">提交评价</h3>
+                        </div>
+                        <div class="card-body p-8">
+                            <form id="reviewForm">
+                                <div class="mb-6">
+                                    <label class="form-label text-gray-700 fw-medium mb-4">课程评分</label>
+                                    <div class="rating-stars d-flex space-x-2 mb-4">
+                                        <div class="star cursor-pointer text-gray-300 hover:text-yellow-400 transition-colors duration-300">
+                                            <i class="far fa-star fa-2x"></i>
+                                        </div>
+                                        <div class="star cursor-pointer text-gray-300 hover:text-yellow-400 transition-colors duration-300">
+                                            <i class="far fa-star fa-2x"></i>
+                                        </div>
+                                        <div class="star cursor-pointer text-gray-300 hover:text-yellow-400 transition-colors duration-300">
+                                            <i class="far fa-star fa-2x"></i>
+                                        </div>
+                                        <div class="star cursor-pointer text-gray-300 hover:text-yellow-400 transition-colors duration-300">
+                                            <i class="far fa-star fa-2x"></i>
+                                        </div>
+                                        <div class="star cursor-pointer text-gray-300 hover:text-yellow-400 transition-colors duration-300">
+                                            <i class="far fa-star fa-2x"></i>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="rating" id="rating" required>
+                                </div>
+                                <div class="mb-6">
+                                    <label for="reviewContent" class="form-label text-gray-700 fw-medium">评价内容</label>
+                                    <textarea class="form-control border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300" id="reviewContent" rows="5" placeholder="请分享您对课程的看法、收获和建议..." required></textarea>
+                                </div>
+                                <div class="mb-6">
+                                    <label for="reviewerName" class="form-label text-gray-700 fw-medium">您的姓名</label>
+                                    <input type="text" class="form-control border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300" id="reviewerName" placeholder="请输入您的姓名" required>
+                                </div>
+                                <button type="submit" class="btn btn-dark w-100 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-300">提交评价</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 学生评价列表 -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="card shadow-sm rounded-lg overflow-hidden">
+                        <div class="card-header bg-white border-bottom border-gray-100">
+                            <h3 class="card-title fw-bold text-dark mb-0">学生评价列表</h3>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="review-list">
+                                <!-- 评价项 1 -->
+                                <div class="review-item border-bottom border-gray-100 p-6">
+                                    <div class="review-header d-flex justify-between items-start mb-4">
+                                        <div class="reviewer-info d-flex items-center">
+                                            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=student%20portrait%20young%20person&image_size=square" alt="学生" class="rounded-full w-12 h-12 object-cover mr-4">
+                                            <div>
+                                                <h4 class="reviewer-name fw-bold text-dark mb-1">示例学生1</h4>
+                                                <p class="review-date text-gray-500 text-sm">2026-01-15</p>
+                                            </div>
+                                        </div>
+                                        <div class="review-rating text-yellow-400">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="review-content">
+                                        <p class="text-gray-600">课程内容丰富，讲解清晰，老师非常专业。通过这门课程，我对机器学习有了更深入的理解，并且能够应用所学知识解决实际问题。作业和项目设计合理，能够很好地巩固所学知识。</p>
+                                    </div>
+                                </div>
+
+                                <!-- 评价项 2 -->
+                                <div class="review-item border-bottom border-gray-100 p-6">
+                                    <div class="review-header d-flex justify-between items-start mb-4">
+                                        <div class="reviewer-info d-flex items-center">
+                                            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=student%20portrait%20young%20woman&image_size=square" alt="学生" class="rounded-full w-12 h-12 object-cover mr-4">
+                                            <div>
+                                                <h4 class="reviewer-name fw-bold text-dark mb-1">示例学生2</h4>
+                                                <p class="review-date text-gray-500 text-sm">2026-01-10</p>
+                                            </div>
+                                        </div>
+                                        <div class="review-rating text-yellow-400">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                    <div class="review-content">
+                                        <p class="text-gray-600">课程设计合理，理论与实践相结合。老师讲解深入浅出，课件制作精美。虽然课程内容有一定难度，但是通过老师的讲解和自己的努力，还是能够很好地掌握。整体来说是一门非常值得学习的课程。</p>
+                                    </div>
+                                </div>
+
+                                <!-- 评价项 3 -->
+                                <div class="review-item border-bottom border-gray-100 p-6">
+                                    <div class="review-header d-flex justify-between items-start mb-4">
+                                        <div class="reviewer-info d-flex items-center">
+                                            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=student%20portrait%20young%20man&image_size=square" alt="学生" class="rounded-full w-12 h-12 object-cover mr-4">
+                                            <div>
+                                                <h4 class="reviewer-name fw-bold text-dark mb-1">示例学生3</h4>
+                                                <p class="review-date text-gray-500 text-sm">2026-01-05</p>
+                                            </div>
+                                        </div>
+                                        <div class="review-rating text-yellow-400">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="review-content">
+                                        <p class="text-gray-600">老师讲解认真负责，课程内容系统全面。通过这门课程，我不仅学习了机器学习的基本概念和算法，还掌握了如何使用Python实现这些算法。课程中的实践项目让我有机会将所学知识应用到实际问题中，收获很大。</p>
+                                    </div>
+                                </div>
+
+                                <!-- 评价项 4 -->
+                                <div class="review-item border-bottom border-gray-100 p-6">
+                                    <div class="review-header d-flex justify-between items-start mb-4">
+                                        <div class="reviewer-info d-flex items-center">
+                                            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=student%20portrait%20young%20woman%20glasses&image_size=square" alt="学生" class="rounded-full w-12 h-12 object-cover mr-4">
+                                            <div>
+                                                <h4 class="reviewer-name fw-bold text-dark mb-1">示例学生4</h4>
+                                                <p class="review-date text-gray-500 text-sm">2025-12-28</p>
+                                            </div>
+                                        </div>
+                                        <div class="review-rating text-yellow-400">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="review-content">
+                                        <p class="text-gray-600">这是一门非常棒的机器学习课程！老师的讲解非常清晰，注重概念的理解和实际应用。课程内容涵盖了机器学习的主要领域，包括监督学习、无监督学习和强化学习等。通过这门课程的学习，我对机器学习有了全面的认识，并且能够独立完成一些机器学习项目。强烈推荐给对机器学习感兴趣的同学！</p>
+                                    </div>
+                                </div>
+
+                                <!-- 评价项 5 -->
+                                <div class="review-item p-6">
+                                    <div class="review-header d-flex justify-between items-start mb-4">
+                                        <div class="reviewer-info d-flex items-center">
+                                            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=student%20portrait%20young%20man%20casual&image_size=square" alt="学生" class="rounded-full w-12 h-12 object-cover mr-4">
+                                            <div>
+                                                <h4 class="reviewer-name fw-bold text-dark mb-1">示例学生5</h4>
+                                                <p class="review-date text-gray-500 text-sm">2025-12-20</p>
+                                            </div>
+                                        </div>
+                                        <div class="review-rating text-yellow-400">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="review-content">
+                                        <p class="text-gray-600">课程内容丰富，老师讲解详细。作业和考试能够很好地检验学习成果。通过这门课程的学习，我掌握了机器学习的基本原理和应用方法，为后续的学习和研究打下了坚实的基础。唯一的建议是希望能够增加更多的实践项目，让学生有更多的机会应用所学知识。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-top border-gray-100 p-6">
+                            <div class="pagination d-flex justify-center">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">上一页</a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">下一页</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container">
+            <div class="row g-6">
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="footer-title fw-bold mb-4">机器学习课程</h3>
+                    <p class="text-gray-400 mb-4">本课程旨在介绍机器学习的基本概念、理论和方法，帮助学生掌握机器学习的核心技术和应用能力。</p>
+                    <div class="social-links space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-weixin fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-weibo fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-github fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="footer-title fw-bold mb-4">快速链接</h3>
+                    <ul class="footer-links space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-300">首页</a></li>
+                        <li><a href="course-evaluation.html" class="text-gray-400 hover:text-white transition-colors duration-300">课程评价</a></li>
+                        <li><a href="teacher-student-interaction.html" class="text-gray-400 hover:text-white transition-colors duration-300">师生互动</a></li>
+                        <li><a href="homework-submission.html" class="text-gray-400 hover:text-white transition-colors duration-300">作业提交</a></li>
+                        <li><a href="other-resources.html" class="text-gray-400 hover:text-white transition-colors duration-300">其他资源</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <h3 class="footer-title fw-bold mb-4">联系我们</h3>
+                    <ul class="footer-contact space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">示例大学 计算机科学与技术学院</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-gray-400 mr-3"></i>
+                            <span class="text-gray-400">123-4567-8910</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-gray-400 mr-3"></i>
+                            <span class="text-gray-400">example@university.edu.cn</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-8 pt-6 border-t border-gray-800">
+                <div class="col-lg-12 text-center">
+                    <p class="text-gray-500">© 2026 机器学习课程. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 自定义JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

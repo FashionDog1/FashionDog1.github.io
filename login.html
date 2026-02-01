@@ -1,53 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录</title>
-    <link rel="shortcut icon" href="img/logo.jpg">
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/login.css">
-
+    <title>登录 - 机器学习课程网站</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 自定义CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="bj" style="background: url(./img/bj.png);">
-    <div class="container">
-        <div class="login-wrapper">
-            <!-- 左 -->
-            
-            <!-- 右 -->
-            <div class="login-right">
-                <div class="top">
-                    <a href="wdjx.html"> <img src="img/logo.jpg" alt="" class="login-img"></a>
-                    <h1 class="sign">登录</h1>
-                </div>
-                <div class="login-form">
-                    <div class="item">
-                        <div class="username-wrapper">
-                            <label>账号：</label>
-                            <div class="username-item">
-                                <input type="text" class="username">
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.jpg" alt="机器学习课程" class="logo-img">
+                <span class="ms-2 fw-bold text-dark">机器学习课程</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="course-evaluation.html">课程评价</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teacher-student-interaction.html">师生互动</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="homework-submission.html">作业提交</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="other-resources.html">其他资源</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="login.html">登录</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">注册</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 登录表单 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-7">
+                    <div class="card shadow-sm rounded-lg overflow-hidden">
+                        <div class="card-body p-8">
+                            <div class="text-center mb-8">
+                                <h2 class="fw-bold text-dark mb-2">欢迎登录</h2>
+                                <p class="text-gray-600">请输入您的账号和密码</p>
                             </div>
-                        </div>
-                        <div class="password-wrapper">
-                            <label>密码：</label>
-                            <div class="password-item">
-                                <input type="password" class="password">
+                            <form id="loginForm">
+                                <div class="mb-4">
+                                    <label for="username" class="form-label text-gray-700 fw-medium">用户名</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text text-gray-400 bg-gray-50 border-gray-200">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                        <input type="text" class="form-control border-gray-200 rounded-end-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300" id="username" placeholder="请输入用户名" required>
+                                    </div>
+                                </div>
+                                <div class="mb-6">
+                                    <label for="password" class="form-label text-gray-700 fw-medium">密码</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text text-gray-400 bg-gray-50 border-gray-200">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                        <input type="password" class="form-control border-gray-200 rounded-end-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300" id="password" placeholder="请输入密码" required>
+                                        <span class="input-group-text text-gray-400 bg-gray-50 border-gray-200 rounded-end-lg cursor-pointer">
+                                            <i class="fas fa-eye-slash"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between mb-6">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input rounded text-blue-500 focus:ring-blue-500 border-gray-200" id="rememberMe">
+                                        <label class="form-check-label text-gray-600" for="rememberMe">记住我</label>
+                                    </div>
+                                    <a href="#" class="text-blue-500 hover:text-blue-700 transition-colors duration-300">忘记密码？</a>
+                                </div>
+                                <button type="submit" class="btn btn-dark w-100 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-300">登录</button>
+                            </form>
+                            <div class="mt-8 text-center">
+                                <p class="text-gray-600 mb-4">还没有账号？</p>
+                                <a href="register.html" class="btn btn-outline-dark w-100 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">立即注册</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="sign-btn">
-                    <div class="login-btn"><a href="wdjx.html">登录</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container">
+            <div class="row g-6">
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="footer-title fw-bold mb-4">机器学习课程</h3>
+                    <p class="text-gray-400 mb-4">本课程旨在介绍机器学习的基本概念、理论和方法，帮助学生掌握机器学习的核心技术和应用能力。</p>
+                    <div class="social-links space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-weixin fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-weibo fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-github fa-lg"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="register">
-                    <a href="register.html">无账号?去<span>注册 > </span> </a>
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="footer-title fw-bold mb-4">快速链接</h3>
+                    <ul class="footer-links space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-300">首页</a></li>
+                        <li><a href="course-evaluation.html" class="text-gray-400 hover:text-white transition-colors duration-300">课程评价</a></li>
+                        <li><a href="teacher-student-interaction.html" class="text-gray-400 hover:text-white transition-colors duration-300">师生互动</a></li>
+                        <li><a href="homework-submission.html" class="text-gray-400 hover:text-white transition-colors duration-300">作业提交</a></li>
+                        <li><a href="other-resources.html" class="text-gray-400 hover:text-white transition-colors duration-300">其他资源</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <h3 class="footer-title fw-bold mb-4">联系我们</h3>
+                    <ul class="footer-contact space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">示例大学 计算机科学与技术学院</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-gray-400 mr-3"></i>
+                            <span class="text-gray-400">123-4567-8910</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-gray-400 mr-3"></i>
+                            <span class="text-gray-400">example@university.edu.cn</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-8 pt-6 border-t border-gray-800">
+                <div class="col-lg-12 text-center">
+                    <p class="text-gray-500">© 2026 机器学习课程. All rights reserved.</p>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-</body>
+    </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 自定义JS -->
+    <script src="js/main.js"></script>
+</body>
 </html>
